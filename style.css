@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --softRed: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+  --darkBrown: hsl(25, 47%, 15%);
+  --mediumBrown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --veryPaleOrange: hsl(33, 100%, 98%);
+
+  --borderRadius: 20px;
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  color: hsl(25, 47%, 15%);
+}
+
+body {
+  background: hsl(27, 66%, 92%);
+}
+
+main {
+  width: 540px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#balanceSection {
+  border-radius: var(--borderRadius);
+  background: hsl(10, 79%, 65%);
+  padding: 25px 30px 25px 30px;
+  color: hsl(33, 100%, 98%);
+  display: flex;
+  justify-content: space-between;
+}
+
+strong#balanceAmount {
+  font-size: 2rem;
+}
+
+#balance {
+  margin-bottom: 5px;
+}
+
+#spendingSection {
+  margin-top: 30px;
+  background: hsl(33, 100%, 98%);
+  border-radius: var(--borderRadius);
+  padding: 30px 38px;
+}
+
+#bars,
+#barLabels {
+  display: flex;
+  justify-content: space-between;
+}
+
+#bars {
+  align-items: flex-end;
+  height: 210px;
+  margin-bottom: 8px;
+}
+
+#barLabels {
+  font-size: 0.9rem;
+  color: hsl(28, 10%, 53%);
+}
+
+.bar {
+  width: 50px;
+  height: 50px;
+  background: hsl(10, 79%, 65%);
+  border-radius: 5px;
+  position: relative;
+}
+
+.bar:hover {
+  cursor: pointer;
+  background: hsla(10, 79%, 65%, 0.5);
+}
+
+.bar.current {
+  background: hsl(186, 34%, 60%);
+}
+
+.bar.current:hover {
+  background: hsla(186, 34%, 60%, 0.5);
+}
+
+.bar:hover::before {
+  content: attr(data-before);
+  position: absolute;
+  top: -50px;
+  left: -10px;
+
+  width: 70px;
+  height: 40px;
+  border-radius: 5px;
+  background: hsl(25, 47%, 15%);
+  color: hsl(33, 100%, 98%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.barDate {
+  text-align: center;
+  width: 50px;
+}
+
+#barGraph {
+  margin-bottom: 30px;
+}
+
+#mon {
+  height: 100px;
+}
+
+#row {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  letter-spacing: -1px;
+  font-size: 1.9rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: hsl(28, 10%, 53%);
+}
+
+strong#spendingAmount {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+#changeSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 15px;
+}
+
+#percentage {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+hr {
+  margin-bottom: 30px;
+  border-color: hsla(10, 79%, 65%, 0.1);
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --borderRadius: 12px;
+  }
+
+  main {
+    width: 90%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    transform: none;
+    margin: 80px auto;
+  }
+
+  #balanceSection {
+    padding: 15px 20px 15px 20px;
+  }
+
+  strong#balanceAmount {
+    font-size: 1.5rem;
+  }
+
+  #balance {
+    font-size: 0.9rem;
+  }
+
+  #logo {
+    transform: scale(0.8, 0.8);
+  }
+
+  #spendingSection {
+    margin-top: 17px;
+    padding: 20px 24px;
+  }
+
+  .bar {
+    width: 32px;
+  }
+
+  .bar:hover::before {
+    left: -19px;
+    z-index: 1;
+  }
+
+  .barDate {
+    width: 32px;
+  }
+
+  #barGraph {
+    margin-bottom: 20px;
+  }
+
+  hr {
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+    letter-spacing: -0.2px;
+  }
+
+  strong#spendingAmount {
+    font-size: 2rem;
+  }
+
+  #changeSection {
+    margin-bottom: 8px;
+  }
+
+  #percentage {
+    font-size: 0.9rem;
+  }
+}

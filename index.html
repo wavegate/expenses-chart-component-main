@@ -1,43 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Expenses chart component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
 
-  My balance
-  $921.48
-
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main>
+    <div id="balanceSection">
+      <div id="balanceColumn">
+        <div id="balance">My balance</div>
+        <strong id="balanceAmount">$921.48</strong>
+      </div>
+      <img src="images/logo.svg" alt="logo" id="logo">
+    </div>
+    <div id="spendingSection">
+      <h1>Spending - Last 7 days</h1>
+      <div id="barGraph">
+        <div id="bars">
+          <div class="bar" id="mon"></div>
+          <div class="bar" id="tue"></div>
+          <div class="bar" id="wed"></div>
+          <div class="bar" id="thu"></div>
+          <div class="bar" id="fri"></div>
+          <div class="bar" id="sat"></div>
+          <div class="bar" id="sun"></div>
+        </div>
+        <div id="barLabels">
+          <div class="barDate">mon</div>
+          <div class="barDate">tue</div>
+          <div class="barDate">wed</div>
+          <div class="barDate">thu</div>
+          <div class="barDate">fri</div>
+          <div class="barDate">sat</div>
+          <div class="barDate">sun</div>
+        </div>
+      </div>
+      <hr>
+      <div id="row">
+        <div id="headingSection">
+          <h2 id="total">Total this month</h2>
+          <strong id="spendingAmount">$478.33</strong>
+        </div>
+        <div id="changeSection">
+          <div id="percentage">+2.4%</div>
+          <h2>from last month</h2>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
 </body>
+
 </html>
